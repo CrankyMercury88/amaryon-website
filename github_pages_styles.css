@@ -1,0 +1,397 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: white;
+    background: #000;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Navigation */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 100;
+    padding: 1rem 0;
+    transition: all 0.3s ease;
+}
+
+nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #ccc;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 80px;
+}
+
+.hero h1 {
+    font-size: clamp(3rem, 8vw, 6rem);
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 1rem;
+    line-height: 0.9;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto 2rem;
+    font-weight: 300;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: white;
+    color: #000;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    border: 2px solid white;
+}
+
+.cta-button:hover {
+    background: transparent;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Section Styles */
+section {
+    padding: 5rem 0;
+}
+
+.section-title {
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+/* About Section */
+.about {
+    background: #111;
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.about-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.about-stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.stat {
+    text-align: center;
+    padding: 2rem;
+    background: #222;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(255,255,255,0.1);
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: white;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+    margin-top: 0.5rem;
+}
+
+/* Portfolio Section */
+.portfolio {
+    padding: 5rem 0;
+}
+
+.portfolio-scroll {
+    display: flex;
+    gap: 2rem;
+    overflow-x: auto;
+    padding: 2rem 0;
+    scroll-behavior: smooth;
+}
+
+.portfolio-scroll::-webkit-scrollbar {
+    height: 8px;
+}
+
+.portfolio-scroll::-webkit-scrollbar-track {
+    background: #333;
+    border-radius: 10px;
+}
+
+.portfolio-scroll::-webkit-scrollbar-thumb {
+    background: #666;
+    border-radius: 10px;
+}
+
+.portfolio-item {
+    min-width: 350px;
+    height: 250px;
+    background: #111;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    border: 1px solid #333;
+}
+
+.portfolio-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(255,255,255,0.1);
+}
+
+.portfolio-item h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.portfolio-item p {
+    font-size: 0.9rem;
+    color: #ccc;
+}
+
+/* Contact Section */
+.contact {
+    background: #333;
+    color: white;
+    text-align: center;
+}
+
+.contact .section-title {
+    color: white;
+}
+
+.contact-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.contact-item {
+    padding: 1.5rem;
+    background: rgba(255,255,255,0.1);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+}
+
+.contact-item h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.contact-item p {
+    font-size: 1rem;
+}
+
+/* Waterfall Background Effect */
+.waterfall-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.waterfall-stream {
+    position: absolute;
+    top: -50px;
+    width: 8px;
+    height: 100vh;
+    background: linear-gradient(
+        to bottom,
+        rgba(173, 216, 230, 0.4) 0%,
+        rgba(135, 206, 235, 0.6) 20%,
+        rgba(70, 130, 180, 0.7) 50%,
+        rgba(30, 144, 255, 0.8) 80%,
+        rgba(0, 100, 200, 0.9) 100%
+    );
+    border-radius: 4px;
+    animation: waterfallFlow 3s linear infinite;
+    box-shadow: 
+        0 0 10px rgba(135, 206, 235, 0.3),
+        inset 2px 0 4px rgba(255, 255, 255, 0.2),
+        inset -2px 0 4px rgba(0, 50, 100, 0.3);
+}
+
+.waterfall-stream:nth-child(odd) {
+    animation-delay: -1.5s;
+    width: 6px;
+    opacity: 0.8;
+}
+
+.waterfall-stream:nth-child(3n) {
+    animation-delay: -1s;
+    width: 10px;
+    opacity: 0.9;
+}
+
+.waterfall-stream:nth-child(4n) {
+    animation-delay: -2s;
+    width: 5px;
+    opacity: 0.7;
+}
+
+.waterfall-stream:nth-child(5n) {
+    animation-delay: -0.5s;
+    width: 12px;
+    opacity: 0.85;
+}
+
+@keyframes waterfallFlow {
+    0% {
+        transform: translateY(-100vh) scaleY(0.8);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh) scaleY(1.2);
+        opacity: 0;
+    }
+}
+
+/* Water mist effect */
+.water-mist {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(ellipse at 20% 50%, rgba(173, 216, 230, 0.1) 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 30%, rgba(135, 206, 235, 0.08) 0%, transparent 50%),
+        radial-gradient(ellipse at 40% 80%, rgba(70, 130, 180, 0.06) 0%, transparent 50%);
+    animation: mistFlow 8s ease-in-out infinite alternate;
+}
+
+@keyframes mistFlow {
+    0% {
+        opacity: 0.3;
+        transform: translateX(-10px);
+    }
+    100% {
+        opacity: 0.6;
+        transform: translateX(10px);
+    }
+}
+
+/* Ensure all content stays above waterfall */
+nav, .hero, .about, .portfolio, .contact {
+    position: relative;
+    z-index: 1;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .about-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .portfolio-item {
+        min-width: 280px;
+    }
+
+    .contact-info {
+        grid-template-columns: 1fr;
+    }
+}
